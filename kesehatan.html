@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asuransi Kesehatan - Nakama Asuransi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kesehatan.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Nakama Asuransi</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mobil.html">Asuransi Mobil</a></li>
+                    <li><a href="#" class="active">Asuransi Kesehatan</a></li>
+                    <li><a href="jiwa.html">Asuransi Jiwa</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Masuk</a>
+                <a href="signup.html" class="btn btn-register">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="asuransi-kesehatan-section">
+            <div class="container">
+                <h1 class="section-title">Pembelian Produk Asuransi Kesehatan</h1>
+                
+                <form id="health-insurance-form" class="insurance-form">
+                    <p class="form-description">Mohon masukkan data diri dan riwayat kesehatan untuk mendapatkan estimasi premi.</p>
+
+                    <div class="form-group">
+                        <label for="full-name-ktp">Nama lengkap sesuai KTP</label>
+                        <input type="text" id="full-name-ktp" name="full-name-ktp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">Tanggal lahir</label>
+                        <input type="date" id="birth-date" name="birth-date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Pekerjaan</label>
+                        <input type="text" id="occupation" name="occupation" required>
+                    </div>
+
+                    <div class="form-group-radio">
+                        <p>Apakah Anda merokok?</p>
+                        <div class="radio-options">
+                            <input type="radio" id="smoker-yes" name="smoker" value="1" required>
+                            <label for="smoker-yes">Ya</label>
+                            <input type="radio" id="smoker-no" name="smoker" value="0">
+                            <label for="smoker-no">Tidak</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group-radio">
+                        <p>Punya riwayat hipertensi?</p>
+                        <div class="radio-options">
+                            <input type="radio" id="hypertension-yes" name="hypertension" value="1" required>
+                            <label for="hypertension-yes">Ya</label>
+                            <input type="radio" id="hypertension-no" name="hypertension" value="0">
+                            <label for="hypertension-no">Tidak</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group-radio">
+                        <p>Punya riwayat diabetes?</p>
+                        <div class="radio-options">
+                            <input type="radio" id="diabetes-yes" name="diabetes" value="1" required>
+                            <label for="diabetes-yes">Ya</label>
+                            <input type="radio" id="diabetes-no" name="diabetes" value="0">
+                            <label for="diabetes-no">Tidak</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary calculate-btn">Hitung Premi</button>
+                </form>
+
+                <div id="result" class="result-box" style="display: none;">
+                    <h2>Hasil Perhitungan Premi</h2>
+                    <p>Berdasarkan data yang Anda masukkan:</p>
+                    <ul class="result-details">
+                        <li>Nama Lengkap: <span id="display-name"></span></li>
+                        <li>Umur: <span id="display-age"></span></li>
+                        <li>Pekerjaan: <span id="display-occupation"></span></li>
+                        <li>Premi Dasar: <span id="display-base-premium"></span></li>
+                        <li>Premi Final: <strong id="display-final-premium"></strong></li>
+                    </ul>
+                    
+                    <a href="cekout.html" class="btn btn-primary checkout-btn" style="width:100%; margin-top: 20px;">Lanjutkan ke Pembayaran</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ravy Asuransi. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="kesehatan.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravy Asuransi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Nakama Asuransi</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="mobil.html">Asuransi Mobil</a></li>
+                    <li><a href="kesehatan.html">Asuransi Kesehatan</a></li>
+                    <li><a href="jiwa.html">Asuransi Jiwa</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Masuk</a>
+                <a href="signup.html" class="btn btn-register">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1>Asuransi yang cepat dan mudah</h1>
+                <p>Kami ada untuk memberi kalian kenyamanan dan kepercayaan untuk beransurani di web kami.</p>
+                <a href="#produk" class="btn btn-primary">Lihat Produk</a>
+            </div>
+        </section>
+
+        <section id="produk" class="produk-section">
+            <div class="container">
+                <h2 class="section-title">Pilih Produk Sesuai Kebutuhan</h2>
+                <div class="produk-grid">
+
+                    <div class="produk-card">
+                        <img src="/foto/MotorInsurance.png" alt="Asuransi Mobil" class="produk-img">
+                        <h3>Asuransi Mobil</h3>
+                        <p>Jadikan usia mobil kesayanganmu lebih lama dengan proteksi all risk dan TLO dengan harga terbaik.</p>
+                        <a href="mobil.html" class="btn btn-primary">Detail</a>
+                    </div>
+
+                    <div class="produk-card">
+                        <img src="/foto/sehat.jpeg" alt="Asuransi Kesehatan" class="produk-img">
+                        <h3>Asuransi Kesehatan</h3>
+                        <p>Nikmati manfaat perggantian biaya rawat inap dan rawat jalan.</p>
+                        <a href="kesehatan.html" class="btn btn-primary">Detail</a>
+                    </div>
+
+                    <div class="produk-card">
+                        <img src="/foto/jiwa.png" alt="Asuransi Jiwa" class="produk-img">
+                        <h3>Asuransi Jiwa</h3>
+                        <p>Masa depanmu dan keluarga jadi jauh lebih pasti dengan beragam perlindungan.</p>
+                        <a href="jiwa.html" class="btn btn-primary">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ravy Asuransi. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

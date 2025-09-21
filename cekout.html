@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cekout - Nakama Asuransi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobil.css">
+    <link rel="stylesheet" href="cekout.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Nakama Asuransi</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mobil.html">Asuransi Mobil</a></li>
+                    <li><a href="kesehatan.html">Asuransi Kesehatan</a></li>
+                    <li><a href="jiwa.html">Asuransi Jiwa</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Masuk</a>
+                <a href="signup.html" class="btn btn-register">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="cekout-section">
+            <div class="container">
+                <h1 class="section-title">Konfirmasi Pembayaran</h1>
+                
+                <div class="cekout-container">
+                    
+                    <div class="order-summary">
+                        <h3>Ringkasan Pesanan</h3>
+                        </div>
+
+                    <div class="payment-details">
+                        <h3>Informasi Pembayaran</h3>
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="payment-method">Metode Pembayaran</label>
+                                <select id="payment-method" required>
+                                    <option value="">Pilih Metode Pembayaran</option>
+                                    <option value="transfer">Transfer Bank</option>
+                                    <option value="ewallet">E-Wallet (OVO, GoPay, DANA)</option>
+                                    <option value="kartu">Kartu Kredit/Debit</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" id="card-info" style="display:none;">
+                                <label for="card-number">Nomor Kartu</label>
+                                <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                                <label for="card-name">Nama Pemilik Kartu</label>
+                                <input type="text" id="card-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customer-name">Nama Lengkap</label>
+                                <input type="text" id="customer-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customer-email">Email</label>
+                                <input type="email" id="customer-email" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary cekout-btn">Bayar Sekarang</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ravy Asuransi. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cekout.js"></script>
+</body>
+</html>

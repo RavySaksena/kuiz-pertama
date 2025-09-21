@@ -1,0 +1,94 @@
+.cekout-section {
+    padding: 80px 20px;
+    background-color: var(--white-color);
+}
+
+.cekout-container {
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.order-summary,
+.payment-details {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.order-summary h3,
+.payment-details h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+    font-size: 1.1em;
+}
+
+.summary-item:last-of-type {
+    border-bottom: none;
+}
+
+.summary-item .label {
+    color: var(--light-text-color);
+}
+
+.summary-item .value {
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.summary-item.total {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: none;
+    padding-top: 15px;
+}
+
+.payment-details .form-group {
+    margin-bottom: 20px;
+}
+
+.payment-details .form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.payment-details .form-group input,
+.payment-details .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.cekout-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .cekout-container {
+        flex-direction: column;
+    }
+}

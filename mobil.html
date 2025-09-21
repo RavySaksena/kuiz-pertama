@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asuransi Mobil - Nakama Asuransi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobil.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Nakama Asuransi</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mobil.html" class="active">Asuransi Mobil</a></li>
+                    <li><a href="kesehatan.html">Asuransi Kesehatan</a></li>
+                    <li><a href="jiwa.html">Asuransi Jiwa</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">Masuk</a>
+                <a href="signup.html" class="btn btn-register">Daftar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="asuransi-mobil-section">
+            <div class="container">
+                <h1 class="section-title">Pembelian Produk Asuransi Mobil</h1>
+                
+                <form id="car-insurance-form" class="insurance-form">
+                    <p class="form-description">Mohon masukkan data mobil Anda untuk mendapatkan estimasi premi.</p>
+
+                    <div class="form-group">
+                        <label for="car-brand">Merek mobil</label>
+                        <input type="text" id="car-brand" name="car-brand" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-type">Jenis mobil</label>
+                        <input type="text" id="car-type" name="car-type" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="car-year">Tahun pembuatan</label>
+                        <input type="number" id="car-year" name="car-year" required min="1900" max="2025">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-price">Harga mobil</label>
+                        <input type="number" id="car-price" name="car-price" placeholder="Rp" required min="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="license-plate">Nomor plat mobil</label>
+                        <input type="text" id="license-plate" name="license-plate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="engine-number">Nomor mesin</label>
+                        <input type="text" id="engine-number" name="engine-number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="chassis-number">Nomor rangka</label>
+                        <input type="text" id="chassis-number" name="chassis-number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="owner-name">Nama pemilik</label>
+                        <input type="text" id="owner-name" name="owner-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Foto mobil (depan, belakang, kiri, kanan, dashboard, dan mesin)</label>
+                        <input type="file" id="car-photos" name="car-photos" accept="image/*" multiple required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary calculate-btn">Hitung Premi</button>
+                </form>
+
+                <div id="result" class="result-box" style="display: none;">
+                    <h2>Hasil Perhitungan Premi</h2>
+                    <p>Berdasarkan data yang Anda masukkan:</p>
+                    <ul class="result-details">
+                        <li>Harga Mobil: <span id="display-price"></span></li>
+                        <li>Tahun Pembuatan: <span id="display-year"></span></li>
+                        <li>Umur Mobil: <span id="display-age"></span></li>
+                        <li>Tarif Premi: <span id="display-rate"></span></li>
+                    </ul>
+                    <p class="final-premium">Premi Asuransi per tahun: <strong id="display-premium"></strong></p>
+                    
+                    <a href="cekout.html" class="btn btn-primary checkout-btn" style="width:100%; margin-top: 20px;">Lanjutkan ke Pembayaran</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Ravy Asuransi. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mobil.js"></script>
+</body>
+</html>

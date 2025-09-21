@@ -1,0 +1,62 @@
+.histori-section {
+    padding: 80px 20px;
+    background-color: var(--white-color);
+    text-align: center;
+}
+
+.history-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.no-history-message {
+    color: var(--light-text-color);
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.history-container table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-container th,
+.history-container td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.history-container th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.history-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.status-lunas {
+    color: green;
+    font-weight: bold;
+}
+
+.status-belum-lunas {
+    color: orange;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .history-container {
+        overflow-x: auto;
+    }
+    .history-container table {
+        display: block;
+        width: max-content;
+    }
+}
